@@ -1,9 +1,12 @@
+
 body {
   overflow-x: hidden;
   font-family: Sans-Serif;
   margin: 0;
+  background-color: darkslategrey;
 }
 
+/* Nav bar */
 .menu-container {
   position: relative;
   display: flex;
@@ -72,46 +75,284 @@ body {
   font-size: 22px;
 }
 
-/* Mobile styles */
+/* Mobile Nav bar */
 @media only screen and (max-width: 767px) {
   .menu-toggle {
-    display: block;
+      display: block;
   }
 
   .menu {
-    display: none; /* Hidden by default on mobile */
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #000;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 0;
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #000;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
   }
 
   /* When the menu has the 'active' class, show it */
   .menu.active {
     display: flex;
-    background-color: #35e6e6;
+    background-color: #1c7777;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    transition: 1s;
   }
 
   .menu ul {
-    flex-direction: column;
+      flex-direction: column;
   }
 
   .menu li a {
-    color: #000;
-    /* Adjust styles as needed for mobile */
-    /* Example: changing text color, font size, etc. */
+      color: #ffffff;
+  }
+}
+
+/* === Mobile Screenshot Frame Styles === */
+.mobile-screenshots {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.mobile-frame {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  margin: 0 auto;
+  border: 16px solid #333;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: #000;
+  overflow: hidden;
+}
+
+
+.mobile-notch {
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 40px);
+  width: 70px;
+  height: 10px;
+  background: #333;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 2;
+}
+
+.mobile-screenshots {
+  flex: 1;
+  text-align: left;
+}
+
+.hero {
+  flex: 1;
+  text-align: left;
+}
+
+
+.hero-mobile-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.mobile-inner {
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  cursor: pointer;
+}
+
+.mobile-inner img {
+  width: 270px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.instructions {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.hero {
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Common Section Styles */
+.main-body section {
+  padding: 60px 20px;
+}
+
+.main-body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(33% - 40px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
+}
+
+.feature-item h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Supported Devices Section */
+.supported-devices {
+  background: #fff;
+  text-align: center;
+}
+
+.supported-devices h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.supported-devices p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* About Section */
+.about {
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #35e6e6;
+  border: none;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #d31773;
+  border: none;
+  color: #fff;
+  transition: background-color 1s, border-radius 1s, color 1s;
+}
+
+.btn-secondary:hover{
+  background-color: #771042bb;
+  border-radius: 35px;
+  color: #d4d4d4b4;
+}
+
+/* === Download Button Styles === */
+.download-section {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.download-btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #fff;
+  background: #35e6e6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #d31773;
+}
+
+.hero-mobile-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Styling for the mobile-screenshots section */
+.mobile-screenshots {
+  text-align: center;
+}
+
+/* Styling for the hero section */
+.hero {
+  text-align: left;
+}
+
+/* Ensure the image inside the mobile frame doesn't overflow */
+.mobile-inner img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .hero-mobile-wrapper {
+    grid-template-columns: 1fr;
   }
 
-  .menu li a:hover {
-    color: #201d1d;
-    background-color: darkblue;
-    /* Adjust styles as needed for mobile */
-    /* Example: changing text color, font size, etc. */
+  .hero {
+    text-align: center;
   }
 }
