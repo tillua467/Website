@@ -11,7 +11,7 @@
 />
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <link rel="stylesheet" href="styles/style.css" />
-<title>Custom ROM - LOSP</title>
+<title>Lineage Os Special Project</title>
 </head>
 <body>
 
@@ -22,15 +22,16 @@
     </a>
 
     <!-- Button -->
-    <button class="menu-toggle">&#9776;</button>
+    <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
 
     <!-- Menu items -->
     <div class="menu">
         <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="download.html">Downloads</a></li>
         <li><a href="https://t.me/hTwiXXD1NSk3NmI0">Support</a></li>
         <li><a href="https://github.com/Lineage-OS-Special-Project">Source Code</a></li>
+        <li><a href="team.html">Source Team</a></li>
         </ul>
     </div>
     </nav>
@@ -43,7 +44,7 @@
             <div class="mobile-frame">
                 <div class="mobile-notch"></div>
                 <div class="mobile-inner">
-                    <img id="screenshot" src="images/ss1.jpg" alt="Screenshot" />
+                    <img id="screenshot" src="images/ss1.jpg" alt="Screenshot of the ROM" />
                 </div>
             </div>
             <p class="instructions">Tap the screen to view the next screenshot</p>
@@ -61,30 +62,29 @@
         </section>
     </div>
 
-
-
     <!-- Features Section -->
     <section class="features">
         <div class="container">
         <h2>Features</h2>
         <div class="feature-list">
-            <div class="feature-item">
+
+            <div data-aos="fade-up" class="feature-item">
             <h3>Enhanced Performance</h3>
             <p>
-                As it's A lineage based Custom rom
-                it will Boost your device speed and battery
-                life with our tailored
-                optimizations.
+                As it's a Lineage-based custom ROM, it will boost your device speed and battery
+                life with our tailored optimizations.
             </p>
             </div>
-            <div class="feature-item">
+
+            <div data-aos="fade-up" class="feature-item">
             <h3>Customizable Interface</h3>
             <p>
                 Personalize your experience with themes, icons, and extensive
-                tweaks. We are always Adding stuffs to make it Special!
+                tweaks. We are always adding features to make it special!
             </p>
             </div>
-            <div class="feature-item">
+
+            <div data-aos="fade-up" class="feature-item">
             <h3>Regular Updates</h3>
             <p>
                 Stay secure and enjoy the latest features with our frequent
@@ -100,10 +100,10 @@
         <div class="container">
         <h2>Supported Devices</h2>
         <p>
-            Our ROM is New So your Device might not be supported
-            But we hope soon it will
+            Our ROM is new, so your device might not be supported yet.
+            But we hope it will be soon!
         </p>
-        <a href="downloads.html" class="btn btn-secondary">View Devices</a>
+        <a href="download.html" class="btn btn-secondary">View Devices</a>
         </div>
     </section>
 
@@ -119,14 +119,18 @@
         </p>
         </div>
     </section>
-    </div>
 </div>
+
+<!-- Back-to-Top Button -->
+<button id="back-to-top" title="Go to top">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-mQ93yNXO2yBIqZKS5A9trNqlszF7fba74pnpP5k4lg+oC4p+pNECO4h+6l6gkLp/"
     crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 <script src="scripts/script.js"></script>
 </body>
-
 </html>

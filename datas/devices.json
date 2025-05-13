@@ -1,0 +1,33 @@
+[
+    {
+    "name": "POCO X2 | Redmi K30",
+    "codename": "phoenix",
+    "search-name": [
+        "POCO X2",
+        "Redmi K30",
+        "phoenix",
+        "Xiaomi POCO X2"
+    ],
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-x2.jpg",
+    "maintainer": {
+        "name": "tillua467",
+        "link": "https://github.com/tillua467"
+    },
+    "download": "downloads/poco-x2.zip"
+    },
+    {
+    "name": "Redmi Note 7",
+    "codename": "lavender",
+    "search-name": [
+        "Redmi Note 7",
+        "lavender",
+        "Xiaomi Redmi Note 7"
+    ],
+    "image": "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-7.jpg",
+    "maintainer": {
+        "name": "devxyz",
+        "link": "https://github.com/devxyz"
+    },
+    "download": "downloads/redmi-note-7.zip"
+    }
+]

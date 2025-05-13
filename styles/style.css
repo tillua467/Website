@@ -1,4 +1,3 @@
-
 body {
   overflow-x: hidden;
   font-family: Sans-Serif;
@@ -30,8 +29,8 @@ body {
 }
 
 .menu-logo img {
-  max-height: 60px;
-  max-width: 150px;
+  max-height: 100px;
+  max-width: 200px;
   flex-shrink: 0;
 }
 
@@ -119,9 +118,8 @@ body {
 
 .mobile-frame {
   position: relative;
-  width: 300px;
+  width: 256px;
   height: 600px;
-  margin: 0 auto;
   border: 16px solid #333;
   border-top-width: 60px;
   border-bottom-width: 60px;
@@ -129,6 +127,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   background: #000;
   overflow: hidden;
+  margin-right: 350px;
 }
 
 
@@ -158,8 +157,8 @@ body {
 .hero-mobile-wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 70px;
   max-width: 1200px;
   margin: auto;
 }
@@ -172,15 +171,17 @@ body {
 }
 
 .mobile-inner img {
-  width: 270px;
-  height: 100px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
+
 
 .instructions {
   font-size: 16px;
   color: #fff;
   margin-top: 10px;
+  margin-right: 350px;
 }
 
 .hero {
@@ -346,13 +347,167 @@ body {
   height: auto;
 }
 
-/* Adjust for smaller screens */
+/* Back-to-Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #35e6e6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background: #d31773;
+}
+
+/* General mobile adjustments */
 @media (max-width: 768px) {
+  .mobile-frame {
+    width: 200px;
+    height: 500px;
+    margin-right: 0;
+  }
+
+  .mobile-notch {
+    width: 50px;
+    height: 8px;
+    left: calc(50% - 25px);
+  }
+
   .hero-mobile-wrapper {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mobile-screenshots {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .instructions {
+    margin-right: 0;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .features h2 {
+    font-size: 28px;
+  }
+
+  .feature-item {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .feature-item h3 {
+    font-size: 24px;
+  }
+
+  .supported-devices h2 {
+    font-size: 28px;
+  }
+
+  .supported-devices p {
+    font-size: 16px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .download-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+  .mobile-frame {
+    width: 180px;
+    height: 450px;
+  }
+
+  .mobile-notch {
+    width: 40px;
+    height: 6px;
+    left: calc(50% - 20px);
   }
 
   .hero {
-    text-align: center;
+    padding: 80px 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .feature-item {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .feature-item h3 {
+    font-size: 20px;
+  }
+
+  .supported-devices h2 {
+    font-size: 24px;
+  }
+
+  .supported-devices p {
+    font-size: 14px;
+  }
+
+  .about h2 {
+    font-size: 24px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .download-btn {
+    padding: 8px 16px;
+    font-size: 16px;
   }
 }
+
